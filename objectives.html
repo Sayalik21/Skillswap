@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Objectives — SkillSwap</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand"><span class="brand-icon">⟳</span><span class="brand-text">SkillSwap</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="related-work.html">Related Work</a></li>
+      <li><a href="objectives.html" class="active">Objectives</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="conclusion.html">Conclusion</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+  </nav>
+
+  <div class="page-hero">
+    <span class="page-hero-label">Chapter 3</span>
+    <h1>Objectives &amp; Methodology</h1>
+    <p class="lead">SkillSwap was built around six primary objectives spanning platform design, matching intelligence, communication, and community trust — all implemented through a modern full-stack architecture.</p>
+  </div>
+
+  <div class="page-content">
+
+    <h2>Primary Objectives</h2>
+    <div class="obj-grid">
+      <div class="obj-card">
+        <div class="obj-num">Objective 01</div>
+        <h3>Peer-to-Peer Learning Platform</h3>
+        <p>Develop a platform that allows users to both teach and learn various skills through mutual exchange — breaking the one-directional model of traditional e-learning systems.</p>
+      </div>
+      <div class="obj-card">
+        <div class="obj-num">Objective 02</div>
+        <h3>User-Friendly Interface</h3>
+        <p>Create an intuitive UI enabling easy registration, profile creation, and skill listing. Design responsive layouts compatible with both mobile and desktop screens using modern UI principles.</p>
+      </div>
+      <div class="obj-card">
+        <div class="obj-num">Objective 03</div>
+        <h3>Smart Matching System</h3>
+        <p>Implement an intelligent matching system that connects users with complementary skills and learning interests, making the process of finding the right learning partner efficient and personalized.</p>
+      </div>
+      <div class="obj-card">
+        <div class="obj-num">Objective 04</div>
+        <h3>Real-Time Communication</h3>
+        <p>Facilitate real-time communication between users through chat and scheduling features. Support session creation, message history, emoji, file attachments, and meeting calendar integration.</p>
+      </div>
+      <div class="obj-card">
+        <div class="obj-num">Objective 05</div>
+        <h3>Collaborative Learning</h3>
+        <p>Promote collaborative learning and community engagement by encouraging users to share knowledge and experiences through gamified assessments including Concept Match, Debugging Race, and Code Rearrangement.</p>
+      </div>
+      <div class="obj-card">
+        <div class="obj-num">Objective 06</div>
+        <h3>Feedback &amp; Rating System</h3>
+        <p>Incorporate a peer review and rating system to maintain quality and trust among users. Allow both parties to rate sessions and leave feedback, building a reputation-based trust framework.</p>
+      </div>
+    </div>
+
+    <h2>System Architecture</h2>
+    <p>SkillSwap is built on a layered full-stack architecture designed for modularity, scalability, and maintainability. Each layer has clearly defined responsibilities and communicates via APIs.</p>
+
+    <div class="highlight-box">
+      <p><strong>Architecture Layers:</strong> Frontend (React) → Backend Controllers (Node.js + Express) → Business Logic Services → External Integrations → Database Layer (Supabase/PostgreSQL)</p>
+    </div>
+
+    <h2>Frontend Layer — React</h2>
+    <p>The frontend is the user-facing interface built with React for responsiveness and modularity. It allows users to interact with all SkillSwap features through a clean and intuitive UI. Key components include Registration/Login, Dashboard, My Profile, Messages/Chat, and the Take Test Module with sub-components for Concept Match, Debugging Challenge, Code Rearrangement, and Code Completion.</p>
+
+    <h2>Backend Layer — Node.js + Express</h2>
+    <p>The backend processes requests, manages user sessions, and communicates with the database using Node.js for its non-blocking event-driven nature. Key controllers include Authentication Controller (login validation, token generation), User Controller (registration, updates), Profile Controller (skill listing, retrieval), Chat Controller (message delivery, real-time updates), Test Controller (test generation, timer, scoring), and Review Controller (ratings and feedback).</p>
+
+    <h2>Business Logic Layer</h2>
+    <p>This layer contains core functionality and decision-making logic. Services include Authentication Service (JWT-based auth, email validation), Profile Service (bio, skills, badges management), Messaging Service (real-time sockets, session scheduling), Test Service (MCQ engine, timer management, automatic scoring), and Review Service (ratings, feedback records, trust metrics). Each service is independent for modularity and easy maintenance.</p>
+
+    <h2>External Integrations</h2>
+    <p>SkillSwap enhances its credibility through integration with external APIs and platforms to verify user skills authentically:</p>
+    <ul>
+      <li><strong>Email Service</strong> — Sends password reset links and verification emails</li>
+      <li><strong>GitHub API</strong> — Pulls public profiles and repository contributions</li>
+      <li><strong>HackerRank API</strong> — Displays verified competitive programming scores</li>
+      <li><strong>CodeChef API</strong> — Shows problem-solving rankings and achievements</li>
+      <li><strong>LeetCode API</strong> — Integrates coding challenge performance metrics</li>
+    </ul>
+
+    <h2>Database Layer — Supabase</h2>
+    <p>The database layer uses Supabase (PostgreSQL-based) for structured data storage with real-time features. Key tables include: Users Table (auth data, role definitions), Skills Table (offered and desired skills per user), Sessions Table (scheduled sessions, timings, participants), Messages Table (chat history, real-time logs), Tests Table (questions and answers), Test Results Table (scores, timings, performance), and Reviews Table (ratings, comments, feedback).</p>
+
+    <h2>Technology Stack Summary</h2>
+    <ul>
+      <li><strong>Frontend:</strong> React (component-based, Virtual DOM, responsive design)</li>
+      <li><strong>Backend:</strong> Node.js + Express.js (non-blocking I/O, RESTful APIs)</li>
+      <li><strong>Database:</strong> MongoDB + Supabase (flexible schema + real-time PostgreSQL)</li>
+      <li><strong>Authentication:</strong> Supabase Auth (JWT, OAuth, email/password)</li>
+      <li><strong>Deployment:</strong> Vercel (continuous deployment via GitHub integration)</li>
+    </ul>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="brand-icon">⟳</span> SkillSwap</div>
+      <p class="footer-sub">Group 13 · 2025</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

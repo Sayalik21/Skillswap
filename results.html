@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Results — SkillSwap</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand"><span class="brand-icon">⟳</span><span class="brand-text">SkillSwap</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="related-work.html">Related Work</a></li>
+      <li><a href="objectives.html">Objectives</a></li>
+      <li><a href="results.html" class="active">Results</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="conclusion.html">Conclusion</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+  </nav>
+
+  <div class="page-hero">
+    <span class="page-hero-label">Chapter 4</span>
+    <h1>Results &amp; Discussion</h1>
+    <p class="lead">SkillSwap successfully implements its core vision of peer-to-peer skill exchange with a complete, functional platform featuring real-time chat, gamified assessments, user profiles, and session management.</p>
+  </div>
+
+  <div class="page-content">
+
+    <h2>Implemented Features Overview</h2>
+    <p>The SkillSwap platform has been developed and deployed as a functional full-stack web application. All primary features described in the objectives have been implemented and tested. Below is a summary of the key results and the working modules of the platform:</p>
+    <ul>
+      <li>User registration, login, and authentication via Supabase (email/password and OAuth)</li>
+      <li>Profile management with skills offered, skills wanted, bio, links, and badge display</li>
+      <li>Real-time peer messaging with emoji, file attachment, and calendar scheduling</li>
+      <li>Gamified Take Test module with five challenge types and live leaderboard scoring</li>
+      <li>Test results page with score, star rating, rank position, and answer review</li>
+      <li>Peer review and feedback system after each completed learning session</li>
+    </ul>
+
+    <h2>Platform Screenshots</h2>
+
+    <div class="results-gallery">
+      <div class="result-item">
+        <img src="images/Screenshot_2025-10-29_124539.png" alt="Take Test Module" />
+        <div class="result-caption">
+          <strong>Take Test Module</strong>
+          <span>Gamified assessments — Concept Match, Debugging Race, and Code Rearrangement with PLAY buttons and estimated completion times</span>
+        </div>
+      </div>
+      <div class="result-item">
+        <img src="images/Screenshot_2025-10-29_124555.png" alt="Results - Concept Match" />
+        <div class="result-caption">
+          <strong>Results — Concept Match</strong>
+          <span>Post-test results showing score (40 pts), correct answers (4/10), star rating (2/5), rank position (#64), and full answer review with correct/incorrect highlighting</span>
+        </div>
+      </div>
+      <div class="result-item">
+        <img src="images/Screenshot_2025-10-29_124650.png" alt="Messages / Chat" />
+        <div class="result-caption">
+          <strong>Real-Time Messaging</strong>
+          <span>Peer-to-peer chat interface showing conversation with John Doe (interested in full-stack development), with emoji, attachment, and calendar scheduling tools</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>Take Test Module — 5 Game Types</h2>
+    <p>The gamified assessment module is one of SkillSwap's most distinctive features, offering five different challenge formats designed to validate learner skills across conceptual understanding and practical coding ability:</p>
+    <ul>
+      <li><strong>Concept Match (MCQ)</strong> — A concept description is shown; select the correct concept title. Fast responses earn bonus points. Timed at 5–10 minutes.</li>
+      <li><strong>Debugging Race</strong> — Identify and fix bugs in short code snippets before time runs out. Speed + correctness = final score. Timed at 5–10 minutes.</li>
+      <li><strong>Code Rearrangement</strong> — Drag and drop shuffled lines of code into the correct order to form a working program. Tests logical sequencing ability.</li>
+      <li><strong>Code Completion</strong> — Fill in missing keywords and syntax by drag and drop. Complete incomplete code by dragging missing tokens into place. Accuracy and speed both rewarded.</li>
+      <li><strong>Fill in the Blank Coding</strong> — Complete code snippets with missing syntax elements, testing syntax familiarity and precision under time pressure.</li>
+    </ul>
+
+    <h2>Scoring &amp; Ranking System</h2>
+    <p>The test module features a comprehensive performance measurement system that motivates continued engagement through transparent metrics and peer comparison:</p>
+    <ul>
+      <li><strong>Points Score</strong> — Awarded for each correct answer, with bonus points for fast responses</li>
+      <li><strong>Star Rating (1–5)</strong> — Reflects overall performance quality in the session</li>
+      <li><strong>Rank Position</strong> — Shows the user's standing among all peers who completed the same test (e.g., #64 out of all participants)</li>
+      <li><strong>Answer Review</strong> — Full review of each question showing your answer, the correct answer, and an explanation of why</li>
+    </ul>
+
+    <h2>Messaging System Results</h2>
+    <p>The real-time chat system was successfully implemented, supporting multi-user conversations between matched peers. The messages interface shows recent conversations with peer details (name, interest), timestamps, and full chat history. The conversation view includes a message input bar with emoji picker, file attachment, calendar scheduling, and a send button. Messages are styled to clearly distinguish sent (right-aligned, purple) from received (left-aligned, dark) messages — following modern chat UI conventions familiar to users.</p>
+
+    <h2>Discussion</h2>
+    <p>The SkillSwap platform successfully demonstrates the concept of a peer-to-peer learning environment with a complete, working implementation. The gamified test module proved particularly engaging during testing — the combination of timed challenges, immediate feedback, and peer ranking created a compelling loop that encourages repeated practice and skill improvement. The messaging system enables the natural peer interaction that is central to the platform's philosophy, allowing learners to schedule sessions, share resources, and follow up after completed exchanges.</p>
+    <p>The architecture's modular design — with clearly separated frontend, backend, business logic, and database layers — means individual components can be upgraded independently without disrupting the whole system, which is essential for future enhancements like AI-based matching and mobile application development.</p>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="brand-icon">⟳</span> SkillSwap</div>
+      <p class="footer-sub">Group 13 · 2025</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
